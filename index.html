@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="img/Gulag.png">
+
+    <title>GULAG 2.0</title>
+	<link rel="icon" type="image/png" href="img/Gulag.png">
+
+
+</head>
+
+<body class="bg-dark" style="background-image: url(img/GulagHome.png); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
+  <nav class="navbar navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/Gulag.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+      GULAG 2.0
+    </a>
+    <ul class="nav float-right">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="docs.html">Documentation</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron bg-secondary my-4">
+	    <img class="float-right" src="img/Gulag.png">
+	    <h1 class="display-4 text-warning">Welcome,</h1>
+	    <hr class="my-4 bg-dark">
+	    <p class="lead text-warning">
+	      GULAG 2.0 is a GUI based MySQL application developped in python using the tKinter framework, and MySQL connector.
+	      The Github Repo for the project is linked to in the Contact Us section of the website.
+	      Please feel free to give us a feedback and report any bugs that you encounter.
+        <br><br>
+        It is a big upgrade from the previous GulagPy which was a simple prison management web-app also developed in Python using the flask framework along with some basic csv file handling and ftplib library and was a huge failure due to server issues and wasn't flexible enough.
+	    </p>
+	    <div class="card-footer bg-secondary">
+	      <div class="row">
+	        <div class="col">
+	          <button type="button" class="btn btn-primary d-inline m-2" data-toggle="modal" data-target="#downloadmodal">Download</button>
+            <a class="btn btn-warning d-inline m-2" href="docs.html">Docs</a>
+	          <a class="btn btn-warning d-inline m-2" href="contact.html">Contact Us</a>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+  <div class="modal fade" id="downloadmodal" tabindex="-1" role="dialog" aria-labelledby="downloadLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-primary" id="downloadLabel">Download GULAG 2.0</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5 class='my-2 text-secondary' ><u>Download source </u><img src=img/GitHub.png /></h5>
+          <p>Run in command prompt<a style="color:deeppink" href="#" data-toggle="tooltip" title="Git must be installed on your system"><sup>[?]</sup></a></p>
+          <div class=' alert alert-success'>git clone https://github.com/AaravRajput/GULAG_2.0.git</div>
+          <p>Requires installation of following libraries:
+          pil
+webbrowser
+mysql-connector</p>
+
+          <hr class="my-3 bg-dark">
+          <h5 class='my-2 text-secondary' ><u>Download application </u><img src=img/Gulag.png width=30 height=35 /></h5>
+          <p>(Windows only)</p>
+          <a class="mx-auto btn btn-success" href="gulag/GULAG 2-Release.zip"><img src="img/download-ico.png" width="25" height="25" /> Start Download</a>
+
+        </div>
+        <div class="modal-footer">
+          <!--span style="color:deeppink">*Requires git installed on your system</span>-->
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

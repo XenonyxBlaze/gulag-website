@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="img/Gulag.jpeg">
+
+    <title>Documentation</title>
+	<link rel="icon" type="image/png" href="img/Gulag.png">
+
+
+</head>
+
+<body class="bg-dark" style="background-image: url(img/TheGulag.png); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
+  <nav class="navbar navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/Gulag.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+      GULAG 2.0
+    </a>
+    <ul class="nav float-right">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron bg-secondary my-4">
+	    <img class="float-right" src="img/Gulag.png">
+      <h1 class="display-4 text-white">DOCUMENTATION</h1>
+      <hr class="my-4 bg-dark">
+      <br><br><br>
+      <div>
+        <h1 class='text-white'>Demo Video</h1><br>
+        <div class='card'>
+          <div class='card-body'>
+            Coming Soon
+            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class='mx-auto d-block'></iframe>-->
+          </div>
+        </div>
+      </div>
+      <br>
+      <div><!--Textual documentation -->
+        <hr class='my-1 bg-dark'>
+        <h1 class='text-white'>The GULAG Database</h1>
+        <h3>Getting Started</h3>
+        <p class='text-white'>On starting the application, you should see a window looking like the image below</p>
+        <img src='img/docs/mainWindow.jpeg' class='img-fluid d-block mx-auto'>
+        <br><br>
+        <h3>Connecting</h3>
+        <p class='text-white'>On the top left corner of the window, you will see a menubar like this: </p>
+        <img src='img/docs/menu.jpeg' class='d-block mx-auto'><br>
+        <p class='text-white'>To get started, first we will connect the application to a MySQL server.GulagPy was a prison database management project so for GULAG 2.0 we have provided a sample database to be used by the user for testing out the app. To connect to it first we will click on the 'Options' tab in the menubar and click on 'Connect' from the dropdown</p>
+        <img src='img/docs/options.jpg' class='img-fluid d-block mx-auto'>
+        <p class='text-white'>On clicking on 'Connect' a window like this will pop up:</p>
+        <img src='img/docs/connection.jpeg' class='img-fluid d-block mx-auto'>
+       
+        <p class='text-white'>As you can see the form for the connection has already been partly filled. All you have to do is modify the Username to : < aarav_guestuser >. That is the guest account that we have provided to you so that you can test out our app. This guest user has only limited permissions to protext the database from mischeivous hands. To speak plainly all you can do is Add Records to a table and Update records pre-existing in the table and can not commit the changes you have made. To gain access to the root user you can contact us (More on that later)</p><br>
+         <div class="alert alert-info">
+        The username to be entered is : < aarav_guestuser ><br>
+        The password to be entered is : < gulagGUEST123 >
+        </div>
+        <p class='text-white'>
+        Upon successfully connecting, a message box will popup stating that you have successfully connected to the server :</p>
+        <img src='img/docs/successconnect.jpeg' class='img-fluid d-block mx-auto'><br>
+        <h3>Databases & Tables</h3>
+        <p class='text-white'>Now the 'Database' section in our main app will get refreshed and will display the available databases :</p>
+        <img src='img/docs/guest_db.jpeg'  class='img-fluid d-block mx-auto'><br>
+        <p class='text-white'>The information_schema database is a system database and will not be of any use other than just viewing the records out of curiosity<br>To continue, we will double click on the aarav_db database which is our sample database.<br>On double clicking, a message box will pop up stating that we have selected the database and all our further actions will be performed on it</p>
+        <img src='img/docs/success_db_use.jpeg' class='img-fluid d-block mx-auto'>
+        <p class='text-white'>Now, our 'Tables' section will get updated with the tables provided in the selected database. Currently, at the time of writing this documentation, our database has only one table: 'prisoners'. However, you will be able to see two more: 'employees' and 'visitors'.</p>
+        <img src='img/docs/tables.jpeg' class='img-fluid d-block mx-auto'>
+        <h3>Records</h3>
+        <p class='text-white'>On double clicking the 'prisoners' table, the 'Records' section will get updated and display all the records entered:</p>
+        <img src='img/docs/records.jpeg' class='img-fluid d-block mx-auto'>
+        <p class='text-white'>Again, currently it has only 3 records but more will be added.<br>On top of the records are the names of the column. You can change the display width of each column by dragging the column dividers like so: </p>
+        <img src='img/docs/resize.jpg'class='img-fluid d-block mx-auto'>
+        <h3>Querying Records</h3>
+        <p class='text-white'>You might have noticed this tab on top of the records table. You can use this tab to search the records by any single column (currently) as shown: </p>
+        <img src='img/docs/query.jpeg' class='img-fluid d-block mx-auto'><br>
+        <img src='img/docs/query2.jpeg' class='img-fluid d-block mx-auto'>
+        <h3 >Adding Records</h3>
+        <p class='text-white'>On the right side of the application you will find a DML commands panel like this:</p>
+        <img src='img/docs/sidepanels.jpeg' class='img-fluid d-block mx-auto'>
+        <p class='text-white'>On clicking the 'ADD RECORD' button, the main window will get withdrawn and a new window with the fields to be entered will pop up like so: </p>
+        <img src='img/docs/addrec.jpeg'class='img-fluid d-block mx-auto'>
+        <p class='text-white'>Fill out the given form carefully because the program isn't currently capable of deecting and fixing user errors. If any error occurs, the operation will be cancelled and the exact error will be diplayed so you may try to fix it manually.</p>
+        <h3> Updating Records </h3>
+        <p class='text-white'>To update a pre-existing record, first you need to select the record from the table and then click on the 'UPDATE RECORD' button. Just like when you add a record, a new window will pop up and the main app will get withdrawn.<br>
+        <img src='img/docs/updaterec.jpeg'class='img-fluid d-block mx-auto'> The same fields will appear only filled with the pre existing information. You can modify them as you will and click on the UPDATE button.</p>
+        <h3>Help Menu</h3>
+        <p class='text-white'>On the top menu bar, you might have noticed a 'Help' tab. On clicking it, a dropdown appears like so: <img src='img/docs/helpmenu.jpg'class='img-fluid d-block mx-auto'>Clicking on 'GULAG Docs' a new browser window will open up with this webpage.<br><br>Clicking on 'Join help server' will take you to the invite link to out Discord server where you can get help from the developers. Also we are open to any doubts for python and are willing to help you out on any project you may be working on.</p>
+        <h3>Requesting root access</h3>
+        <p class='text-white'>To gain more privileges and access to our MySQL server, you can click on the 'Request database root' option in the 'Help' menu. This will pop up a new window with a form like so:<img src='img/docs/dbroot.jpeg'class='img-fluid d-block mx-auto'> Fill out the given form and hit submit. We will recieve your request and judge wether we should give you the access or not.</p>
+        <h3>Feedback & Bug Reports</h3>
+        <p class='text-white'>In the menubar there is a feedback tab given clicking on it opens the following dropdown: <img src='img/docs/feedoption.jpg'class='img-fluid d-block mx-auto'>To report any bug that you may have encountered in our app, please click on the Report Bug option. It will pop up a new window like so: <img src='img/docs/bug.jpeg'class='img-fluid d-block mx-auto'>Fill out this form and hit submit button. We will recieve the report and work it out and send revert to the provided email on the status of the report.<br><br>To give feedback to our app or to give us suggestions, please use the Provide feedback option in the Feedback menu. It will open a new window like so: <img src='img/docs/feedback.jpeg'class='img-fluid d-block mx-auto'>Fill out the form and hit on submit button. We will recieve your feedback/suggestion.</p>
+        <h3>The Developer Console</h3>
+        <p class='text-white'>For more advanced SQL commands, we have provided a developer console which can not display outputs (currently) but displays and highlights any error or reverts with a success message.<br>To enable the console, go to the options tab and click on the 'Developer Console' option<img src='img/docs/developer.jpg'class='img-fluid d-block mx-auto'>This will open a new window like so: <img src='img/docs/dev.jpeg'class='img-fluid d-block mx-auto'>Use the input command to enter MySQL commands.<br>End</p>
+        <hr class='my-4 bg-dark'>
+      </div>
+      <br>
+      <div>
+        <h1 class='text-white'>Furthermore</h1>
+        <p class='text-white'>You might have noticed that we have skipped a lot of the available commands in the above documentation. That was simply done because we were using the guest account on 'OUR' MySQL server and as stated earlier it has only limited privileges. Now we will use the 'localhost' or the local MySQL server running on your own machines and demonstrate these left-out functions or you can request the access to root priveleges on the gulag database</p>
+        <img src='img/docs/local_connect.jpeg'class='img-fluid d-block mx-auto'>
+        <br>
+        <div class='card card-body'>
+          <h3>Creating Database</h3>
+          <p class='text-dark'>After connecting on a localhost, the Databases section will get refreshed and display the available databases: <img src='img/docs/local_db.jpeg' class='img-fluid d-block mx-auto'>Clicking on the CREATE button a new window will pop up like so: <img src='img/docs/local_cr_db.jpeg' class='img-fluid d-block mx-auto'>Give your new database a name and hit on create.<img src='img/docs/local_cr_db2.jpeg' class='img-fluid d-block mx-auto'>A messagebox will pop up stating that the database was created successfully<img src='img/docs/local_cr_db_s.jpeg' class='img-fluid d-block mx-auto'>The Database section in our main app will get refreshed and now display our newly created database too<img src='img/docs/local_cr_db_s2.jpeg' class='img-fluid d-block mx-auto'></p>
+        </div>
+        <br>
+        <div class='card card-body'>
+          <h3>Dropping Database</h3>
+          <p class='text-dark'>You can drop a database by selecting it in the Database section and clicking the drop button.<img src='img/docs/local_dr_db.jpeg' class='img-fluid d-block mx-auto'>A confirmation messagebox will pop up.<img src='img/docs/local_dr_db_confirm.jpeg' class='img-fluid d-block mx-auto'> Click on Yes to delete the database. A messagebox will popup confirming the successfull deletion of the database.<img src='img/docs/local_dr_db_s.jpeg' class='img-fluid d-block mx-auto'>The database section will get refreshed.</p>
+        </div>
+        <br>
+        <div class='card card-body'>
+          <h3>Creating Tables</h3>
+          <p class='text-dark'>This is the most complicated part of the entire program and maybe you will encounter some bugs in this. Therefore extreme caution is required to use this module<br>After selecting a database to work with we will click on the CREATE button in the Tables section<img src='img/docs/local_cr_tb.jpeg' class='img-fluid d-block mx-auto'>A warning will be given and you should really abide by it.<img src='img/docs/local_cr_tb_w.jpeg' class='img-fluid d-block mx-auto'>Now the main app will get withdrawn and a new window will pop up like so:<img src='img/docs/local_cr_tb_win.jpeg' class='img-fluid d-block mx-auto'>In the top right hand corner, enter the name of the table.<img src='img/docs/local_cr_tb_n.jpeg' class='img-fluid d-block mx-auto'>Now, every table in MySQL needs atleast one column so we will go ahead and do that by clicking the Add Column button. It will again trigger the same warning and then open a new window and withdraw the previous one.<img src='img/docs/local_cr_tb_addc.jpeg' class='img-fluid d-block mx-auto'>Enter the column name, select it's datatype, select if it can be null or not and give it a default value(optional).<img src='img/docs/local_cr_tb_addc_null.jpeg'class='img-fluid d-block mx-auto'><br><br>NOTE:<br>If you select Integer,Char or Varchar, the program will ask you to give size of the column. DO NOT leave this blank. This is one of the bug that is currently known and will be worked on soon.<img src='img/docs/local_cr_tb_addc_size.jpeg'class='img-fluid d-block mx-auto'>If you select the decimal datatype, you will be asked to provide the total number of digits and the position of the decimal point.<img src='img/docs/local_cr_tb_addc_dec.jpeg'class='img-fluid d-block mx-auto'><br>After filling out the column details, you can click on the ADD button and the column details will be stored to be used when you give the command to create the table.<img src='img/docs/local_cr_tb_fin.jpeg'class='img-fluid d-block mx-auto'><br>If per chance you realize that you have accidentally added a column or have given wrong specification for the column, you can select the column and click on the delete column button and add again.<br>After you have finished adding columns you can click on Create Table button. This will open a popup window asking you to provide a primary key.<img src='img/docs/local_cr_tb_prim.jpeg'class='img-fluid d-block mx-auto'> Select the column which you want to be the primary key and click ok and if all goes well you will see: <img src='img/docs/local_cr_tb_s.jpeg'class='img-fluid d-block mx-auto'></p>
+        </div>
+        <br>
+        <div class='card card-body'>
+          <h3>Deleting Records</h3>
+          <p class='text-dark'>If you want to delete a record from the table, select the record and click on the DELETE RECORD button.<img src='img/docs/local_del_rec.jpeg'class='img-fluid d-block mx-auto'>The program will ask a confirmation.<img src='img/docs/local_del_rec_confirm.jpeg'class='img-fluid d-block mx-auto'> Click yes to delete the record.<img src='img/docs/local_del_rec_s.jpeg'class='img-fluid d-block mx-auto'></p>
+        </div>
+        <br>
+        <div class='card card-body'>
+          <h3>Committing Changes</h3>
+          <p class='text-dark'>If you want to commit the changes made to the database, click on the commit button.<img src='img/docs/local_commit.jpeg'class='img-fluid d-block mx-auto'>Click Yes<img src='img/docs/local_commit_s.jpeg'class='img-fluid d-block mx-auto'></p>
+          <hr class='my-4 bg-dark'>
+          <h3>Deleting Tables</h3>
+          <p class='text-dark'>If you want to delete a table, select the table and click on the delete button in the Tables section.<img src='img/docs/local_del_tb.jpeg'class='img-fluid d-block mx-auto'>Click Yes<img src='img/docs/local_del_tb_S.jpeg'class='img-fluid d-block mx-auto'></p>
+          <hr class='my-4 bg-dark'>
+          <h3>Truncating Tables</h3>
+          <p class='text-dark'>If you want to truncate a table, select the table and click on the TRUNCATE button in the Tables section.<img src='img/docs/local_trun.jpeg'class='img-fluid d-block mx-auto'>Click Yes<img src='img/docs/local_trun_s.jpeg'class='img-fluid d-block mx-auto'></p>
+        </div>
+      </div>
+	  </div>
+	</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
